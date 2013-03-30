@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.mediasport.matchcenter"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="org.mediasport.matchcenter.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.ui.registers.TeamsFragment"
+            android:label="@string/title_activity_teams" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.MatchScreen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_match_screen"
+            android:theme="@style/FullscreenTheme" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.MainActivity1"
+            android:label="@string/title_activity_main_activity1" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.ui.settings.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.ui.mainmenu.MainMenuActivity"
+            android:label="@string/title_activity_main_menu" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.ui.newmatch.NewMatchParamsActivity"
+            android:label="@string/title_activity_new_match_params" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.MatchScreenActivity"
+            android:label="@string/title_activity_match_screen" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.MatchScreeActivity_new"
+            android:label="@string/title_activity_match_scree_activity_new" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.MatchScreenActivitySwipe"
+            android:label="@string/title_activity_match_screen_activity_swipe" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.ui.registers.RegisterFragmentActivity"
+            android:label="@string/title_activity_register" >
+        </activity>
+        <activity
+            android:name="org.mediasport.matchcenter.ui.matchscreen.MatchActivity"
+            android:label="@string/title_activity_match" >
+        </activity>
+    </application>
+
+</manifest>

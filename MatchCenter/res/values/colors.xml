@@ -1,0 +1,8 @@
+<resources>
+
+    <color name="common_backround">#C3FDB8</color>
+    <color name="all_buttons_background">#FFFFFF</color>
+    <color name="card_yellow">#FFFF00</color>
+    <color name="card_red">#FF0000</color>
+    
+</resources>
