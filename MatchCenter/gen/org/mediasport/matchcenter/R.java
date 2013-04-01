@@ -70,8 +70,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int imageButtonClock=0x7f0b0006;
         public static final int imageButtonHomeGoal=0x7f0b0007;
         public static final int ivEventImage=0x7f0b002f;
-        public static final int ivImage=0x7f0b003d;
-        public static final int ivMainMenuImage=0x7f0b003a;
+        public static final int ivImage=0x7f0b003a;
+        public static final int ivMainMenuImage=0x7f0b003c;
         public static final int listViewAwayPlayers=0x7f0b000c;
         public static final int listViewHomePlayers=0x7f0b0003;
         public static final int listViewTeams=0x7f0b0012;
@@ -100,12 +100,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int textViewScore=0x7f0b0004;
         public static final int tvEventDescription=0x7f0b0031;
         public static final int tvEventTime=0x7f0b0030;
-        public static final int tvMainMenuItem=0x7f0b003b;
+        public static final int tvMainMenuItem=0x7f0b003d;
         public static final int tvMatchStat_AwayTeam=0x7f0b0035;
         public static final int tvMatchStat_AwayTeamGoals=0x7f0b0038;
         public static final int tvMatchStat_HomeTeam=0x7f0b0034;
         public static final int tvMatchStat_HomeTeamGoals=0x7f0b0037;
-        public static final int tvPlayerName=0x7f0b003c;
+        public static final int tvPlayerName=0x7f0b003b;
         public static final int twEventEditorText=0x7f0b0027;
         public static final int twEventEditor_EventType=0x7f0b001f;
         public static final int twEventEditor_Time=0x7f0b001d;
@@ -130,10 +130,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int fragment_match_screen_activity_swipe_dummy=0x7f03000f;
         public static final int fragment_match_statistic=0x7f030010;
         public static final int fragment_register_dummy=0x7f030011;
-        public static final int main_menu_listview=0x7f030012;
-        public static final int players_away_in_match_listview=0x7f030013;
-        public static final int players_home_in_match_listview=0x7f030014;
-        public static final int test=0x7f030015;
+        public static final int fragment_register_player=0x7f030012;
+        public static final int main_menu_listview=0x7f030013;
+        public static final int players_away_in_match_listview=0x7f030014;
+        public static final int players_home_in_match_listview=0x7f030015;
+        public static final int test=0x7f030016;
     }
     public static final class menu {
         public static final int activity_main=0x7f0a0000;

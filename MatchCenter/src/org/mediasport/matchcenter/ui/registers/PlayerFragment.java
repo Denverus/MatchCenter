@@ -70,7 +70,7 @@ public class PlayerFragment extends Fragment {
 		    	playerAdapter.notifyDataSetChanged();    			}
 		});
 
-	     playerAdapter  = new PlayerRegisterListAdapter(getActivity(), playerList, R.layout.players_home_in_match_listview);
+	     playerAdapter  = new PlayerRegisterListAdapter(getActivity(), playerList, R.layout.fragment_register_player);
 	     
 	     for (Player player : data.getPlayerList()) {
 	    	 playerList.add(player);
