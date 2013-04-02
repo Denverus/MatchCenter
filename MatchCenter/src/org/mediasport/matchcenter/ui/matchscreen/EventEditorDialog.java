@@ -119,17 +119,23 @@ public class EventEditorDialog extends DialogFragment  {
 				@Override
 				public void onCheckedChanged(RadioGroup group, int checkedId) {
 					switch (checkedId) {
-	        			case R.id.radioButtonGoal: eventTypeRadioGroup.setBackgroundColor(Color.parseColor("#ff0000"));
+	        			case R.id.radioButtonGoal: event.setEventType(EEventType.GOAL);
 	        				break;
-	        			case R.id.radioButtonOwnGoal: eventTypeRadioGroup.setBackgroundColor(Color.parseColor("#ffff00"));
+	        			case R.id.radioButtonOwnGoal: event.setEventType(EEventType.OWNGOAL);
+        					break;
+	        			case R.id.radioButtonPenalty: event.setEventType(EEventType.PENALTY);
+    						break;
+	        			case R.id.radioButtonPenaltyNoGoalKeeper: event.setEventType(EEventType.PENALTY_NOGOAL_KEEPER);
+    						break;
+	        			case R.id.radioButtonPenaltyNoGoalOut: event.setEventType(EEventType.PENALTY_NOGOAL_OUT);
+    						break;
+	        			case R.id.radioButtonShootIn: event.setEventType(EEventType.SHOOTIN);
 	        				break;
-	        			case R.id.radioButtonShootIn: eventTypeRadioGroup.setBackgroundColor(Color.parseColor("#ff00ff"));
+	        			case R.id.radioButtonShootOut: event.setEventType(EEventType.SHOOTOUT);
 	        				break;
-	        			case R.id.radioButtonShootOut: eventTypeRadioGroup.setBackgroundColor(Color.parseColor("#ff0f00"));
+	        			case R.id.radioButtonYelCard: event.setEventType(EEventType.YELLOW);
 	        				break;
-	        			case R.id.radioButtonYelCard: eventTypeRadioGroup.setBackgroundColor(Color.parseColor("#ff0F0f"));
-	        				break;
-	        			case R.id.radioButtonRedCard: eventTypeRadioGroup.setBackgroundColor(Color.parseColor("#fff0f0"));
+	        			case R.id.radioButtonRedCard: event.setEventType(EEventType.RED);
 	        				break;
         				default:
         					break;
@@ -148,9 +154,9 @@ public class EventEditorDialog extends DialogFragment  {
 				@Override
 				public void onCheckedChanged(RadioGroup group, int checkedId) {
 					switch (checkedId) {
-	        			case R.id.radioButtonHomeTeam: teamsRadioGroup.setBackgroundColor(Color.parseColor("#ff0000"));
+	        			case R.id.radioButtonHomeTeam: event.setTeam(match.getMatch().getHomeTeam());
 	        				break;
-	        			case R.id.radioButtonAwayTeam: teamsRadioGroup.setBackgroundColor(Color.parseColor("#ffff00"));
+	        			case R.id.radioButtonAwayTeam: event.setTeam(match.getMatch().getAwayTeam());
 	        				break;
         				default:
         					break;

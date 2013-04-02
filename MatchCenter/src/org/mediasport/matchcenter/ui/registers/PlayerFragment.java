@@ -71,7 +71,7 @@ public class PlayerFragment extends Fragment {
 		});
 
 	     playerAdapter  = new PlayerRegisterListAdapter(getActivity(), playerList, R.layout.fragment_register_player);
-	     
+	     playerList.clear();
 	     for (Player player : data.getPlayerList()) {
 	    	 playerList.add(player);
 		}

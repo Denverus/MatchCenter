@@ -62,8 +62,30 @@ public class Event implements Serializable {
 			switch (eventType) {
 			case GOAL:
 				return "Гол";
+			case FREEKICK_GOAL:
+				return "Гол со штрафного удара";
+			case PENALTY:
+				return "Гол с пенальти";
+			case PENALTY_NOGOAL_KEEPER:
+				return "Гол с пенальти не забит (вратарь)";
+			case PENALTY_NOGOAL_OUT:
+				return "Гол с пенальти не забит (удар мимо ворот)";
 			case YELLOW:
-				return "ЖК";
+				return "Желтая карточка";
+			case OWNGOAL:
+				return "Гол в свои ворота";
+			case RED:
+				return "Красная карточка";
+			case SHOOTIN:
+				return "Удар в створ";
+			case SHOOTOUT:
+				return "Удар мимо ворот";
+			case CORNER:
+				return "Угловой удар";
+			case FOUL:
+				return "Фол";
+			case COMMENT:
+				return "Комментарий";
 			default:
 				break;
 			}

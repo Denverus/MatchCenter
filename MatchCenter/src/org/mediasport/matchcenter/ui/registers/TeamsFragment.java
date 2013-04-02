@@ -53,7 +53,7 @@ public class TeamsFragment extends Fragment {
 	     listViewTeams = (ListView) v.findViewById(R.id.listViewTeams);
 
 	     teamsAdapter  = new TeamRegisterListAdapter(getActivity(), teamsList, R.layout.fragment_register_player);
-	     
+	     teamsList.clear();
 	     for (Team team : data.getTeamList()) {
 	    	 teamsList.add(team);
 		}

@@ -53,7 +53,7 @@ public class MatchFragment extends Fragment {
 	     listViewMatch = (ListView) v.findViewById(R.id.listViewTeams);
 
 	     matchAdapter  = new MatchRegisterListAdapter(getActivity(), matchList, R.layout.fragment_register_player);
-	     
+	     matchList.clear();
 	     for (Match match : data.getMatchList()) {
 	    	 matchList.add(match);
 		}

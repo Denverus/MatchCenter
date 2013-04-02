@@ -65,8 +65,14 @@
     <string name="event_type_owngoal">Гол в свои ворота</string>
     <string name="event_type_shootin">Удар в створ</string>
     <string name="event_type_shootout">Удар мимо ворот</string>
-    <string name="event_type_yellow">ЖК</string>
-    <string name="event_type_red">КК</string>
+    <string name="event_type_yellow">Желтая карточка</string>
+    <string name="event_type_red">Красная карточка</string>
     <string name="event_type_comment">Комментарий</string>
+    <string name="event_type_freekick">Гол со штрафного удара</string>
+    <string name="event_type_penalty">Гол с пенальти</string>
+    <string name="event_type_nogoal_penalty_out">Не забит гол с пенальти (мимо)</string>
+    <string name="event_type_nogoal_penalty_goalkeeper">Не забит гол с пенальти (вратарь)</string>
+    <string name="event_type_corner">Угловой удар</string>
+    <string name="event_type_foul">Фол</string>
     
 </resources>
