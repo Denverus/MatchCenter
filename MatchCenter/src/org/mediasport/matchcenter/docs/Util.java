@@ -33,6 +33,12 @@ public class Util {
     	Team awayTeam =  data.findTeamByName(data.getMUName());
     	
     	engine.createMatch(homeTeam, awayTeam);
+    	
+    	Match match = engine.getMatch();
+    	
+    	match.setHomePlayerList(data.getPlayerListByTeam(homeTeam));
+    	match.setAwayPlayerList(data.getPlayerListByTeam(awayTeam));
+    	
 //		engine.addHomeEvent(null, null, EEventType.GOAL);
 //		engine.addAwayEvent(null, null, EEventType.GOAL);
 //		engine.addAwayEvent(null, null, EEventType.GOAL);

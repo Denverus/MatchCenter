@@ -51,10 +51,11 @@
     <string name="test_player6_firstname">Рио</string>
     <string name="test_player6_lastname">Фердинанд</string>
     <string name="title_activity_register">RegisterActivity</string>
-    <string name="title_activity_match">MatchActivity</string>
+    <string name="title_activity_match">Экран матча</string>
     <string name="event_editor_dlg_save">Сохранить</string>
     <string name="event_editor_dlg_cancel">Отмена</string>
     <string name="event_editor_dlg_title">Редактор события</string>
+    <string name="squad_editor_dlg_title">Редактор заявки на матч</string>
     <string name="event_editor_dlg_time">Время:</string>
     <string name="event_editor_dlg_team">Команда:</string>
     <string name="event_editor_dlg_player_author">Автор:</string>

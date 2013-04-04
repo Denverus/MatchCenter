@@ -9,7 +9,21 @@ public class Match {
 	private Team homeTeam = null;
 	private Team awayTeam = null;
 	private List<Event> eventList = new ArrayList<Event>();
+	private List<Player> homePlayerList = new ArrayList<Player>();
+	private List<Player> awayPlayerList = new ArrayList<Player>();
 	
+	public List<Player> getHomePlayerList() {
+		return homePlayerList;
+	}
+	public void setHomePlayerList(List<Player> homePlayerList) {
+		this.homePlayerList = homePlayerList;
+	}
+	public List<Player> getAwayPlayerList() {
+		return awayPlayerList;
+	}
+	public void setAwayPlayerList(List<Player> awayPlayerList) {
+		this.awayPlayerList = awayPlayerList;
+	}
 	public Date getDate() {
 		return date;
 	}
@@ -63,6 +77,40 @@ public class Match {
 	
 	public String getStringScore() {
 		return getHomeGoal() + ":"+ getAwayGoal();
+	}
+	
+	public boolean isPlayerInSquad(Player player, Team team) {
+		List<Player> currentSquad = homePlayerList;
+		
+		if (team != homeTeam)
+			currentSquad = awayPlayerList;
+		
+		return currentSquad.contains(player);
+	}
+
+	public void movePlayerToSquad(Player player, Team team) {
+		List<Player> squadList = homePlayerList;
+		if (team == awayTeam)
+			squadList = awayPlayerList;
+		
+		if (!squadList.contains(player))
+			squadList.add(player);
+	}
+
+	public void removePlayerFromSquad(Player player, Team team) {
+		List<Player> squadList = homePlayerList;
+		if (team == awayTeam)
+			squadList = awayPlayerList;
+		
+		if (squadList.contains(player))
+			squadList.remove(player);
+	}
+	
+	public void setPlayerSquadStatus(Player player, Team team, boolean isInSquad) {
+		if (isInSquad)
+			movePlayerToSquad(player, team);
+		else
+			removePlayerFromSquad(player, team);
 	}
 	
 	@Override

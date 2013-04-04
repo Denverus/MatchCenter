@@ -4,6 +4,7 @@ import org.mediasport.matchcenter.R;
 import org.mediasport.matchcenter.R.id;
 import org.mediasport.matchcenter.R.layout;
 import org.mediasport.matchcenter.R.menu;
+import org.mediasport.matchcenter.docs.Match;
 import org.mediasport.matchcenter.docs.Team;
 import org.mediasport.matchcenter.engine.DataStore;
 import org.mediasport.matchcenter.engine.Factory;
@@ -47,6 +48,11 @@ public class NewMatchParamsActivity extends Activity {
             	Team awayTeam =  data.findTeamByName(buttonAwayTeam.getText().toString());
             	
             	engine.createMatch(homeTeam, awayTeam);
+            	
+            	Match match = engine.getMatch();
+            	
+            	match.setHomePlayerList(data.getPlayerListByTeam(homeTeam));
+            	match.setAwayPlayerList(data.getPlayerListByTeam(awayTeam));
             	
             	Intent myIntent = new Intent(activity, MatchActivity.class);
              	startActivity(myIntent);

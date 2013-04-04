@@ -38,8 +38,10 @@ public class SquadsFrament extends Fragment {
 	
 	public interface onUpdateEventListener {
 	    public void updatingEvent();
+	    public void updateSquad();
 	    public void showEventEditorDlg();
 	    public void showEventEditorDlg(Event event);
+	    public void showSquadEditorDlg(Team team);
 	  }
 	  
 	onUpdateEventListener updateEventListener;
@@ -63,6 +65,13 @@ public class SquadsFrament extends Fragment {
 	private boolean isTimerOn = true;
 
 	private long timerStep = 0; 	
+
+	MatchPlayerListAdapter homePlayerListAdapter = null;
+	MatchPlayerListAdapter awayPlayerListAdapter = null;
+	
+	DataStore data = Factory.getDataStore();
+	MatchEngine engine = Factory.getMatchEngine();
+	Match match = engine.getMatch();
 	
 	 @Override
 	 public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -202,8 +211,8 @@ public class SquadsFrament extends Fragment {
 				@Override
 				public void onClick(View v) {
 	            	MatchEngine engine = Factory.getMatchEngine();
-					
-	            	updateEventListener.showEventEditorDlg(engine.createEvent(engine.getMatch().getHomeTeam()));
+	            	Match match = engine.getMatch();
+					updateEventListener.showSquadEditorDlg(match.getHomeTeam());
 				}
 			});
 	        awayTeamTextVeiw.setOnClickListener(new View.OnClickListener() {
@@ -211,8 +220,8 @@ public class SquadsFrament extends Fragment {
 				@Override
 				public void onClick(View v) {
 	            	MatchEngine engine = Factory.getMatchEngine();
-					
-	            	updateEventListener.showEventEditorDlg(engine.createEvent(engine.getMatch().getAwayTeam()));
+	            	Match match = engine.getMatch();
+					updateEventListener.showSquadEditorDlg(match.getAwayTeam());
 				}
 			});
 	        
@@ -222,26 +231,27 @@ public class SquadsFrament extends Fragment {
 	    }
 	 
 		protected void loadData() {
-	    	DataStore data = Factory.getDataStore();
-	    	MatchEngine engine = Factory.getMatchEngine();
-	    	
-	    	Match match = engine.getMatch();
 	    	String homeTeam = match.getHomeTeam().getShortName();
 	    	String awayTeam = match.getAwayTeam().getShortName();
 			
 			homeTeamTextVeiw.setText(homeTeam);
 			awayTeamTextVeiw.setText(awayTeam);
 			
-			List<Player> homePlayerList = data.getPlayerListByTeam(match.getHomeTeam());
-			List<Player> awayPlayerList = data.getPlayerListByTeam(match.getAwayTeam());
+			List<Player> homePlayerList = match.getHomePlayerList();
+			List<Player> awayPlayerList = match.getAwayPlayerList();
 			
-			MatchPlayerListAdapter homePlayerListAdapter = new MatchPlayerListAdapter(getActivity(), homePlayerList, R.layout.players_home_in_match_listview);
-			MatchPlayerListAdapter awayPlayerListAdapter = new MatchPlayerListAdapter(getActivity(), awayPlayerList, R.layout.players_away_in_match_listview);
-
+			homePlayerListAdapter = new MatchPlayerListAdapter(getActivity(), homePlayerList, R.layout.players_home_in_match_listview);
+			awayPlayerListAdapter = new MatchPlayerListAdapter(getActivity(), awayPlayerList, R.layout.players_away_in_match_listview);
+	
 			homePlayersListView.setAdapter(homePlayerListAdapter);
 			awayPlayersListView.setAdapter(awayPlayerListAdapter);
 		}	 
 		
+		 public void notifyOnSquadUpdate() {
+			 homePlayerListAdapter.notifyDataSetChanged();
+			 awayPlayerListAdapter.notifyDataSetChanged();
+		 }
+		 
 	  @Override
 	  public void onAttach(Activity activity) {
 	    super.onAttach(activity);

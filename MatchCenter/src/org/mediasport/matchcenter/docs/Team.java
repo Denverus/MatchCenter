@@ -1,6 +1,12 @@
 package org.mediasport.matchcenter.docs;
 
-public class Team {
+import java.io.Serializable;
+
+public class Team implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7591543386522676957L;
 	String name;
 	private String shortName; 
 	

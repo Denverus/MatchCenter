@@ -237,4 +237,33 @@ public class MatchActivity extends FragmentActivity implements
 	public void showEventEditorDlg() {
 		showEventEditorDlg(new Event());
 	}
+
+	@Override
+	public void showSquadEditorDlg(Team team) {
+	  	FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+	    Fragment prev = getSupportFragmentManager().findFragmentByTag("dialog");
+	    if (prev != null) {
+	        ft.remove(prev);
+	    }
+	    ft.addToBackStack(null);
+	    		  
+	    SquadEditorDialog newSquadEditorDialog = new SquadEditorDialog();
+
+		Bundle args = new Bundle();
+		args.putSerializable(SquadEditorDialog.ARG_TEAM, team);
+		newSquadEditorDialog.setArguments(args);	    
+	    
+		newSquadEditorDialog.show(getSupportFragmentManager(), "dialog");
+	}
+
+	@Override
+	public void updateSquad() {
+		for (Fragment fragment : fragmentList) {
+			if (fragment.getClass().isAssignableFrom(SquadsFrament.class)) {
+				SquadsFrament squadFrag = (SquadsFrament) fragment;
+				if (squadFrag != null)
+					squadFrag.notifyOnSquadUpdate();
+			}
+		}
+	}
 }
