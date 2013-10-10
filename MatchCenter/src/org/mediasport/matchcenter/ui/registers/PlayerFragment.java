@@ -13,12 +13,14 @@ import org.mediasport.matchcenter.docs.Team;
 import org.mediasport.matchcenter.engine.DataStore;
 import org.mediasport.matchcenter.engine.Factory;
 import org.mediasport.matchcenter.engine.MatchEngine;
+import org.mediasport.matchcenter.ui.matchscreen.EventEditorDialog;
 import org.mediasport.matchcenter.ui.matchscreen.MatchPlayerListAdapter;
+import org.mediasport.matchcenter.ui.registers.EditItemDialog.EItemType;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -58,6 +60,15 @@ public class PlayerFragment extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
+				EditItemDialog newEditItemDlg = new EditItemDialog();
+
+				Bundle args = new Bundle();
+				args.putSerializable(EditItemDialog.ITEM_TYPE, EItemType.Player);
+				newEditItemDlg.setArguments(args);	    
+			    //newEventEditorDlg.setInitialEvent(event);
+			    
+				newEditItemDlg.show(getFragmentManager(), "dialog");
+				
 		    	String name = "Имя1"+playerIndex;
 		    	String lastName = "Фамилия1"+playerIndex;
 		    	

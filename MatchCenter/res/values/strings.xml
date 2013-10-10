@@ -75,5 +75,8 @@
     <string name="event_type_nogoal_penalty_goalkeeper">Не забит гол с пенальти (вратарь)</string>
     <string name="event_type_corner">Угловой удар</string>
     <string name="event_type_foul">Фол</string>
+    <string name="register_item_editor_firstname">Имя:</string>
+    <string name="register_item_editor_lastname">Фамилия:</string>
+    <string name="register_item_editor_team">Команда:</string>
     
 </resources>

@@ -46,11 +46,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int player=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b0048;
+        public static final int action_settings=0x7f0b004e;
+        public static final int btChooseTeam=0x7f0b0048;
         public static final int btEventEditorDialogCancel=0x7f0b0033;
         public static final int btEventEditorDialogOK=0x7f0b0032;
-        public static final int btSquadEditorDialogCancel=0x7f0b0046;
-        public static final int btSquadEditorDialogOK=0x7f0b0045;
+        public static final int btSquadEditorDialogCancel=0x7f0b004c;
+        public static final int btSquadEditorDialogOK=0x7f0b004b;
         public static final int buttonAdd=0x7f0b0013;
         public static final int buttonAllMatches=0x7f0b0016;
         public static final int buttonBeginMatch=0x7f0b0011;
@@ -65,7 +66,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int buttonSettings=0x7f0b001a;
         public static final int buttonStat=0x7f0b0019;
         public static final int buttonTeams=0x7f0b0018;
-        public static final int chSquadEditorCheckBox=0x7f0b0043;
+        public static final int chSquadEditorCheckBox=0x7f0b0049;
+        public static final int etFirstName=0x7f0b0044;
+        public static final int etLastName=0x7f0b0046;
         public static final int ibAwayEvent=0x7f0b000a;
         public static final int ibHomeEvent=0x7f0b0009;
         public static final int ibNewEvent=0x7f0b000e;
@@ -79,9 +82,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int listViewHomePlayers=0x7f0b0003;
         public static final int listViewTeams=0x7f0b0012;
         public static final int lvMatchEventList=0x7f0b0037;
-        public static final int lvSquadEditorDialogList=0x7f0b0044;
+        public static final int lvSquadEditorDialogList=0x7f0b004a;
         public static final int mainMenuList=0x7f0b0000;
-        public static final int menu_settings=0x7f0b0047;
+        public static final int menu_settings=0x7f0b004d;
         public static final int pager=0x7f0b0001;
         public static final int pager_title_strip=0x7f0b000d;
         public static final int radioButtonAwayTeam=0x7f0b002f;
@@ -119,6 +122,9 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int twEventEditor_EventType=0x7f0b001f;
         public static final int twEventEditor_Time=0x7f0b001d;
         public static final int twEventEditor_TimeValue=0x7f0b001e;
+        public static final int twFirstName=0x7f0b0043;
+        public static final int twLastName=0x7f0b0045;
+        public static final int twTeam=0x7f0b0047;
     }
     public static final class layout {
         public static final int activity_main_menu=0x7f030000;
@@ -143,9 +149,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int main_menu_listview=0x7f030013;
         public static final int players_away_in_match_listview=0x7f030014;
         public static final int players_home_in_match_listview=0x7f030015;
-        public static final int sqaud_editor_listview_item=0x7f030016;
-        public static final int squad_editor_dialog=0x7f030017;
-        public static final int test=0x7f030018;
+        public static final int register_item_editor_player=0x7f030016;
+        public static final int sqaud_editor_listview_item=0x7f030017;
+        public static final int squad_editor_dialog=0x7f030018;
+        public static final int test=0x7f030019;
     }
     public static final class menu {
         public static final int activity_main=0x7f0a0000;
@@ -200,28 +207,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int menu_settings=0x7f070002;
         public static final int newmatch=0x7f07000e;
         public static final int players=0x7f070010;
-        public static final int pref_default_display_name=0x7f07004f;
-        public static final int pref_description_social_recommendations=0x7f07004d;
+        public static final int pref_default_display_name=0x7f070052;
+        public static final int pref_description_social_recommendations=0x7f070050;
         /**  Example settings for Data & Sync 
          */
-        public static final int pref_header_data_sync=0x7f070051;
+        public static final int pref_header_data_sync=0x7f070054;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f07004b;
+        public static final int pref_header_general=0x7f07004e;
         /**  Example settings for Notifications 
          */
-        public static final int pref_header_notifications=0x7f070054;
-        public static final int pref_ringtone_silent=0x7f070057;
-        public static final int pref_title_add_friends_to_messages=0x7f070050;
-        public static final int pref_title_display_name=0x7f07004e;
-        public static final int pref_title_new_message_notifications=0x7f070055;
-        public static final int pref_title_ringtone=0x7f070056;
-        public static final int pref_title_social_recommendations=0x7f07004c;
-        public static final int pref_title_sync_frequency=0x7f070052;
-        public static final int pref_title_system_sync_settings=0x7f070053;
-        public static final int pref_title_vibrate=0x7f070058;
+        public static final int pref_header_notifications=0x7f070057;
+        public static final int pref_ringtone_silent=0x7f07005a;
+        public static final int pref_title_add_friends_to_messages=0x7f070053;
+        public static final int pref_title_display_name=0x7f070051;
+        public static final int pref_title_new_message_notifications=0x7f070058;
+        public static final int pref_title_ringtone=0x7f070059;
+        public static final int pref_title_social_recommendations=0x7f07004f;
+        public static final int pref_title_sync_frequency=0x7f070055;
+        public static final int pref_title_system_sync_settings=0x7f070056;
+        public static final int pref_title_vibrate=0x7f07005b;
         public static final int register=0x7f070013;
+        public static final int register_item_editor_firstname=0x7f07004a;
+        public static final int register_item_editor_lastname=0x7f07004b;
+        public static final int register_item_editor_team=0x7f07004c;
         public static final int settings=0x7f070014;
         public static final int squad_editor_dlg_title=0x7f070036;
         public static final int statistic=0x7f070012;
@@ -251,7 +261,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title_activity_match_screen_activity_swipe=0x7f070020;
         public static final int title_activity_new_match_params=0x7f070016;
         public static final int title_activity_register=0x7f070031;
-        public static final int title_activity_settings=0x7f07004a;
+        public static final int title_activity_settings=0x7f07004d;
         public static final int title_activity_teams=0x7f070003;
         public static final int title_section1=0x7f070009;
         public static final int title_section2=0x7f070008;

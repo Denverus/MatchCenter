@@ -74,18 +74,20 @@ public class SquadEditorListAdapter  extends BaseAdapter {
     	
      	final Match match = engine.getMatch();
         
-        final Player player = getPlayer(position);           
+        Player player = getPlayer(position);           
 
         CheckBox checkBox = (CheckBox) view.findViewById(R.id.chSquadEditorCheckBox);
         checkBox.setText(player.toString());
         checkBox.setChecked(match.isPlayerInSquad(player, player.getTeam()));
+        checkBox.setTag(player);
 
         checkBox.setOnCheckedChangeListener(new OnCheckedChangeListener() {
 			
 			@Override
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-				match.setPlayerSquadStatus(player, player.getTeam(), isChecked);
-				
+				CheckBox chkBox = (CheckBox) buttonView;
+				Player tagPlayer = (Player)chkBox.getTag();
+				match.setPlayerSquadStatus(tagPlayer, tagPlayer.getTeam(), isChecked);
 			}
 		});
         

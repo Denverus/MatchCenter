@@ -133,7 +133,8 @@ public class RegisterFragmentActivity extends FragmentActivity implements
 			*/
 			switch (position) {
 			case 0:
-				return new PlayerFragment();
+                return null;
+				//return new PlayerFragment();
 			case 1:
 				return new TeamsFragment();
 			case 2:

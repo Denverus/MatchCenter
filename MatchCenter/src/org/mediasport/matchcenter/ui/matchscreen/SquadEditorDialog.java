@@ -84,6 +84,7 @@ public class SquadEditorDialog extends DialogFragment  {
 				
 				@Override
 				public void onClick(View v) {
+	            	updateEventListener.updateSquad();
 					dialog.dismiss();
 					
 				}
