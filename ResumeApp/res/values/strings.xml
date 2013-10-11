@@ -6,5 +6,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="service">Start</string>
     <string name="cancel">Stop</string>
+    <string name="choose_running_app">Choose running app</string>
+    <string name="running_app_">Running app:</string>
+    <string name="get_info">Get info</string>
 
 </resources>

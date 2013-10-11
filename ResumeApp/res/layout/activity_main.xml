@@ -17,7 +17,20 @@
 	    android:id="@+id/infoButton"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:text="Get info"
+	    android:text="@string/get_info"
 	    android:layout_gravity="center_horizontal" />
+
+	<TextView
+	    android:id="@+id/runningAppTextView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/running_app_"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+	<Button
+	    android:id="@+id/runningAppButton"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/choose_running_app"
+	    android:layout_gravity="center_horizontal" />	
 
 </LinearLayout>
