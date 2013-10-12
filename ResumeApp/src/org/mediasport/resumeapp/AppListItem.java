@@ -1,13 +1,19 @@
 package org.mediasport.resumeapp;
 
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+
 public class AppListItem {
 
 	private int image;
 	private String name;
 	private String description;
+	private ApplicationInfo appInfo;
 	
-	public AppListItem() {
-		// TODO Auto-generated constructor stub
+	public AppListItem(ApplicationInfo appInfo, String name) {
+		this.appInfo = appInfo;
+		this.name = name;
 	}
 
 	public int getImage() {
